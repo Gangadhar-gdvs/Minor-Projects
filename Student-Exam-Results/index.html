@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Exam Results</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1 class="text-center mb-4">Student Results</h1>
+
+    <?php include 'fetch.php'; ?>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="mb-3">Update Result</h1>
+                    <form method="post" action="update.php">
+                        <label for="id">ID:</label>
+                        <input type="text" id="id" name="id">
+                        <label for="marks">Marks:</label>
+                        <input type="text" id="marks" name="marks">
+                        <label for="grade">Grade:</label>
+                        <input type="text" id="grade" name="grade">
+                        <input type="submit" class="btn btn-primary" value="Update" name="update">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="mb-3">Delete Result</h1>
+                    <form method="post" action="update.php">
+                        <label for="id">ID:</label>
+                        <input type="text" id="id" name="id">
+                        <input type="submit" class="btn btn-danger" value="Delete" name="delete">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

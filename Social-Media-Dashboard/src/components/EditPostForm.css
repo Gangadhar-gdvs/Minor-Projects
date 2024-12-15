@@ -1,0 +1,33 @@
+
+.edit-post-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .edit-post-input {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    resize: none;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: pre-wrap; 
+  }
+  
+  .edit-post-button {
+    background-color: #3897f0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .edit-post-button:hover {
+    background-color: #287cc1;
+  }
+  

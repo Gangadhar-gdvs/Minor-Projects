@@ -1,0 +1,112 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Calculator </title>
+
+<style>
+h1 {
+	text-align: center;
+	}
+
+#clear{
+width: 405px;
+border: 3px solid green;
+	border-radius: 10px;
+	padding: 20px;
+	background-color:blue;
+}
+
+.formstyle
+{
+width:415px;
+height: 520px;
+margin: auto;
+border: 3px solid blue;
+border-radius: 10px;
+padding: 20px;
+background: rebeccapurple;
+}
+
+
+
+input
+{
+width: 94px;
+background-color: orange;
+color: red;
+border: 2px solid green;
+	border-radius: 10px;
+	padding: 20px;
+	margin: 3px;
+	font-size: 20px;
+}
+
+
+#calc{
+width: 366px;
+background-color: pink;
+border: 3.5px solid black;
+	border-radius: 10px;
+	padding: 20px;
+	margin: auto;
+}
+
+</style>
+
+</head>
+<body>
+<h1> Calculator</h1>
+<div class= "formstyle">
+<form>
+  <input id = "calc" type ="text" name = "answer"> <br> <br>
+  <input type = "button" value = "1" onclick = "func('1') ">
+  <input type = "button" value = "2" onclick = "func('2')">
+  <input type = "button" value = "3" onclick = "func('3')">
+   <input type = "button" value = "+" onclick = "func('+')">
+  <br> <br>
+  <input type = "button" value = "4" onclick = "func('4') ">
+  <input type = "button" value = "5" onclick = "func('5')">
+  <input type = "button" value = "6" onclick = "func('6')">
+  <input type = "button" value = "-" onclick = "func('-') ">
+  <br> <br>
+  
+  <input type = "button" value = "7" onclick = " func('7')">
+  <input type = "button" value = "8" onclick = "func('8')">
+  <input type = "button" value = "9" onclick = "func('9')">
+  <input type = "button" value = "*" onclick = "func('*')">
+  <br> <br>
+  
+  
+  <input type = "button" value = "/" onclick = "func('/') ">
+  <input type = "button" value = "0" onclick = "func('0')">
+    <input type = "button" value = "." onclick = " func('.')">
+  <input type = "button" value = "=" onclick = "result()">
+  <br> 
+  <br>
+  <input type = "button" value = "Clear All" onclick ="clr()" id="clear">
+  <br>  
+</form>
+</div>
+<script>
+ function func(number)
+  {
+   document.getElementById("calc").value+=number;
+   }
+function result()
+   {
+     a=document.getElementById("calc").value;
+     b=eval(a);
+     document.getElementById("calc").value=b;
+ }
+
+function clr()
+  {
+    document.getElementById("calc").value=" "
+  }
+</script>
+</body>
+</html>
